@@ -80,7 +80,7 @@ import scala.util.{Failure, Left, Right, Success, Try}
  *     }
  * }}}
  */
-sealed abstract class IO[+A] extends internals.IOBinaryCompat[A] {
+sealed abstract class IO[+A] extends internals.IOBinaryCompat[A] with Serializable {
   import IO._
 
   /**
